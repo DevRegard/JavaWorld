@@ -1,0 +1,74 @@
+- java.util
+
+    [List]
+        ArrayList
+            add(value)
+            get(index)
+            size()
+            contains(value)   =>   boolean
+            remove(value)
+            제네릭스<Generics>
+            Arrays.asList(value[])
+            String.join("", value[])
+            Comparator
+                .naturalOrder()
+                .reverseOrder()
+    [Map]
+        HashMap
+            put( , )
+            get(key)   =>   key 의 value   ~> 없을 시, Null
+            getOrDefault( , 디폴트값)        ~> 없을 시, 디폴트값
+            containsKey(key)   =>   boolean
+            remove(key)
+            size()
+            keySet()   =>   모든 key
+            clear()
+            clone()
+
+        LinkedHashMap
+
+        TreeMap
+
+    [Set]
+        HashSet
+            Arrays.asList(value[])
+            intersection.retainAll()   =>   a $ b
+            union.addAll()             =>   a + b
+            substract.removeAll()      =>   a - b
+            add()
+            addAll()
+            remove()
+
+Enum
+  : 서로 관련이 있는 여러 개의 상수 집합을 정의할 때 사용하는 자료형
+
+  enum 변수 {
+    상수1,
+    상수2,
+    상수3
+  };
+
+  출력
+    : 변수.상수[1,2,3]
+
+  반복문
+    : for( 변수 type: 변수.value() )
+
+  장점
+    1. 매직넘버(1,2, .. 상수값) 보다 코드가 명확
+    2. 잘못된 값 사용하는 위험성 제거
+
+  활용
+    : 변수 인덱스를 기억해야하는 불편함을 해결 ~> ex) 주문 상태: 번호가 아닌 변수로 사용
+
+형변환
+    Integer.parseInt()      : 정수[Integer] 으로 변환
+    String.valueOf()        : 문자열[String] 으로 변환
+    Integer.toString()      :        ,,
+    Double.parseDouble()    : 실수[Double] 으로 변환
+
+    int n = 10;
+    String num = "" + n;
+
+    double dd = 10.23;
+    int nn = (int) dd;
