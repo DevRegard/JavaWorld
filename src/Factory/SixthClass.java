@@ -1,8 +1,13 @@
 package Factory;
 
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.Arrays;
+
 public class SixthClass
 {
-    public static void main(String[] args)
+    public static void main(String[] args) throws IOException
     {
 //        System.out.println(factorial(5));
 //        System.out.println(factorial_2(5));
@@ -19,6 +24,13 @@ public class SixthClass
 //        System.out.println(Math.pow(2, 100));
 
         System.out.println(cacheFibonacci(100));
+
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        long inputInt = Integer.parseInt(br.readLine());
+        long result = dynamicFibonacci((int) inputInt);
+        System.out.println(result); br.close();
+
+
     }
 
     public static int factorial(int n)
@@ -54,6 +66,25 @@ public class SixthClass
             cache[i] = cache[i - 1] + cache[i - 2];
 
         return cache[(int) n];
+    }
+
+    public static long dynamicFibonacci(int input)
+    {
+        if(input < 2) return input;
+        else
+        {
+            long[] cache = new long[input + 1];
+            Arrays.fill(cache, -1);
+            cache[0] = 0;
+            cache[1] = 1;
+
+            if (cache[input] != -1) return cache[input];
+            else
+            {
+                cache[input] = dynamicFibonacci(input - 1) + dynamicFibonacci((input - 2));
+                return cache[input];
+            }
+        }
     }
 }
 
