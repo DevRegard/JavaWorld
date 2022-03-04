@@ -7,6 +7,8 @@ import java.util.Arrays;
 
 public class SixthClass
 {
+    private static BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+
     public static void main(String[] args) throws IOException
     {
 //        System.out.println(factorial(5));
@@ -21,30 +23,37 @@ public class SixthClass
         // TODO 시간복잡도 계산(2) : 2^60 = 1.15292150460684698E18
 //        System.out.println(fibonacci(60));
 
+        // TODO 시간복잡도 계산(3) : 2^100 = 1.2676506002282294E30
 //        System.out.println(Math.pow(2, 100));
+//        System.out.println(cacheFibonacci(100));
 
-        System.out.println(cacheFibonacci(100));
-
-        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        // TODO 버퍼클래스 활용 : 입출력 테스트
         long inputInt = Integer.parseInt(br.readLine());
         long result = dynamicFibonacci((int) inputInt);
-        System.out.println(result); br.close();
+
+//        long inputInt = Integer.parseInt(br.readLine());
+//        long result = dynamicFibonacci((int) inputInt);
+        System.out.println(result);
+        br.close();
 
 
     }
 
+    // 재귀 팩토리얼
     public static int factorial(int n)
     {
        if (n <= 1) return n;
        else return factorial(n-1) * n;
     }
 
+    // 재귀 팩토리얼 2 : 왜 0을 무시할까?
     public static int factorial_2(int n)
     {
         if (n == 1) return 1;
         return n * factorial_2(n - 1);
     }
 
+    // 재귀 피보나치
     public static long fibonacci(long n)
     {
 //        System.out.println(n + "번째 연산");
@@ -54,6 +63,7 @@ public class SixthClass
         else return fibonacci(n - 1) + fibonacci(n - 2);
     }
 
+    // 동적계획법 반복문 피보나치
     public static long cacheFibonacci(long n)
     {
         if (n <= 1) return n;
@@ -68,6 +78,7 @@ public class SixthClass
         return cache[(int) n];
     }
 
+    // 동적계획법 재귀 피보나치
     public static long dynamicFibonacci(int input)
     {
         if(input < 2) return input;
@@ -81,11 +92,25 @@ public class SixthClass
             if (cache[input] != -1) return cache[input];
             else
             {
-                cache[input] = dynamicFibonacci(input - 1) + dynamicFibonacci((input - 2));
+                cache[input] = dynamicFibonacci(input - 1) + dynamicFibonacci(input - 2);
                 return cache[input];
             }
         }
     }
+
+    // 행렬 곱셈 피보나치
+   /* public static long matrixFibonacci(int input)
+    {
+        int k = 0;
+
+        long[][] ZERO = {{1, 0}, {0, 1}};
+        long[][] BASE = {{1, 1}, {1, 0}};
+        long[][] result = ansMatrix;
+
+        return result[0][1];
+
+    }*/
+
 }
 
 /*
