@@ -7,8 +7,6 @@ import java.util.Arrays;
 
 public class SixthClass
 {
-    private static BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-
     public static void main(String[] args) throws IOException
     {
 //        System.out.println(factorial(5));
@@ -28,15 +26,11 @@ public class SixthClass
 //        System.out.println(cacheFibonacci(100));
 
         // TODO 버퍼클래스 활용 : 입출력 테스트
-        long inputInt = Integer.parseInt(br.readLine());
-        long result = dynamicFibonacci((int) inputInt);
+        int longValue = (int) bufferInput();
+        dynamicFibonacci(longValue);
 
 //        long inputInt = Integer.parseInt(br.readLine());
 //        long result = dynamicFibonacci((int) inputInt);
-        System.out.println(result);
-        br.close();
-
-
     }
 
     // 재귀 팩토리얼
@@ -111,6 +105,16 @@ public class SixthClass
 
     }*/
 
+    // 버퍼 기능 메서드
+    public static long bufferInput () throws IOException
+    {
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        long inputInt = Integer.parseInt(br.readLine());
+        System.out.println(inputInt);
+        br.close();
+
+        return inputInt;
+    }
 }
 
 /*
