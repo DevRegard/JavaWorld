@@ -26,28 +26,30 @@ public class SixthClass
 //        System.out.println(cacheFibonacci(100));
 
         // TODO 버퍼클래스 활용 : 입출력 테스트
+        // ISSUE: 버퍼 클래스 - 메서드 미 작동, close() 미작동
         int longValue = (int) bufferInput();
         dynamicFibonacci(longValue);
 
 //        long inputInt = Integer.parseInt(br.readLine());
 //        long result = dynamicFibonacci((int) inputInt);
+
     }
 
-    // TODO < 재귀 팩토리얼 >
+    // Method: 재귀 팩토리얼
     public static int factorial(int n)
     {
        if (n <= 1) return n;
        else return factorial(n-1) * n;
     }
 
-    // TODO < 재귀 팩토리얼 2 >
+    // Method: 재귀 팩토리얼 2
     public static int factorial_2(int n)
     {
         if (n == 1) return 1;
         return n * factorial_2(n - 1);
     }
 
-    // TODO < 재귀 피보나치 >
+    // Method < 재귀 피보나치 >
     public static long fibonacci(long n)
     {
 //        System.out.println(n + "번째 연산");
@@ -57,7 +59,7 @@ public class SixthClass
         else return fibonacci(n - 1) + fibonacci(n - 2);
     }
 
-    // TODO < 동적계획법 반복문 피보나치 >
+    // Method < 동적계획법 반복문 피보나치 >
     public static long cacheFibonacci(long n)
     {
         if (n <= 1) return n;
@@ -72,7 +74,7 @@ public class SixthClass
         return cache[(int) n];
     }
 
-    // TODO < 동적계획법 재귀 피보나치 >
+    // Method < 동적계획법 재귀 피보나치 >
     public static long dynamicFibonacci(int input)
     {
         if(input < 2) return input;
@@ -92,7 +94,7 @@ public class SixthClass
         }
     }
 
-    // TODO < 행렬 곱셉 피보나치 >
+    // Method < 행렬 곱셉 피보나치 >
    /* public static long matrixFibonacci(int input)
     {
         int k = 0;
@@ -105,7 +107,7 @@ public class SixthClass
 
     }*/
 
-    // TODO < 버퍼 기능 메서드 >
+    // Method < 버퍼 기능 메서드 >
     public static long bufferInput() throws IOException
     {
         BufferedReader bfr = new BufferedReader(new InputStreamReader(System.in));
