@@ -32,6 +32,7 @@ public class SeventhClass
     // METHOD: 특정 문자 자동 추가
     public static void plusString(StringBuffer sb){
         sb.append(" 는 뻥이야");
+        sb.append("\n 라고 말한건 뻥이야");
         System.out.println(sb);
     }
 }
