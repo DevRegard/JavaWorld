@@ -20,6 +20,9 @@ public class SeventhClass
         sb.append("나는 사실 개발 천재다");
         System.out.println(sb);
         plusString(sb);
+        System.out.println(sb.capacity());
+        limitString(sb);
+        System.out.println("메모리 존재 여부 : " + sb);
     }
 
     // METHOD: 자기 자신 제곱
@@ -30,10 +33,29 @@ public class SeventhClass
     }
 
     // METHOD: 특정 문자 자동 추가
-    public static void plusString(StringBuffer sb){
+    public static void plusString(StringBuffer sb)
+    {
         sb.append(" 는 뻥이야");
         sb.append("\n라고 말한건 뻥이야^^");
-        sb.append("\n라고 말한건 뻥이야");
+//        sb.append("\n라고 말한건 뻥이야");
         System.out.println(sb);
+    }
+
+    // METHOD: 문자열 메모리 검증
+    public static boolean limitString(StringBuffer sb)
+    {
+        if (sb.capacity() > 60)
+        {
+            System.out.println("[사용 가능 메모리 초과]");
+            sb.delete(0, 60);
+            System.out.println("[메모리 초기화 완료]");
+            return false;
+        }
+        else
+        {
+            System.out.println("[사용 가능 메모리 정상]");
+            sb.insert(0, "<검증 완료된 스트링> ");
+            return true;
+        }
     }
 }
