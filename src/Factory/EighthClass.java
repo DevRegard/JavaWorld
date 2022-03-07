@@ -1,5 +1,9 @@
 package Factory;
 
+import java.util.Arrays;
+import java.util.Iterator;
+import java.util.LinkedList;
+
 public class EighthClass
 {
     public static void main(String[] args)
@@ -15,6 +19,18 @@ public class EighthClass
         Customer[] cst = Customer.values();
         for (Customer cl : cst)
             System.out.println(cl);
+
+        // Todo: Iterator 순회
+        LinkedList<Integer> lk = new LinkedList();
+        lk.add(1);
+        lk.add(2);
+        lk.add(3);
+        lk.add(4);
+        System.out.println(lk);
+
+        Iterator<Integer> it = lk.iterator();
+        while (it.hasNext()) System.out.print(it.next() + " ");
+
     }
 
     enum Color
