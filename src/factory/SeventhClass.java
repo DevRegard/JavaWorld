@@ -1,8 +1,6 @@
-package Factory;
+package factory;
 
-import java.io.BufferedReader;
 import java.io.IOException;
-import java.io.InputStreamReader;
 
 public class SeventhClass
 {
