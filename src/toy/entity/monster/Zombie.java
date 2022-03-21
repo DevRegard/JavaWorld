@@ -1,6 +1,6 @@
-package entity.monster;
+package toy.entity.monster;
 
-import entity.Entity;
+import toy.entity.Entity;
 
 public class Zombie extends Entity
 {

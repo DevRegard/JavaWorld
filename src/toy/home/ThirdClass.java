@@ -1,4 +1,4 @@
-package home;
+package toy.home;
 
 import java.util.Scanner;
 

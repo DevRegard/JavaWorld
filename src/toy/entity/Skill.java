@@ -1,4 +1,4 @@
-package entity;
+package toy.entity;
 
 public class Skill
 {
