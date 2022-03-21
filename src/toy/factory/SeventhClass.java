@@ -1,4 +1,4 @@
-package factory;
+package toy.factory;
 
 import java.io.IOException;
 
