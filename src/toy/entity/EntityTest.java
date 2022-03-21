@@ -1,6 +1,4 @@
-package entity;
-
-import entity.monster.Zombie;
+package toy.entity;
 
 public class EntityTest
 {
