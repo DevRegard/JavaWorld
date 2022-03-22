@@ -6,7 +6,15 @@ public class Zombie extends Entity
 {
     private static boolean attack;
 
-    Zombie(){}
+    public Zombie(){}
+
+    public Zombie(int id, int health, String name)
+    {
+        this.id = id;
+        this.health = health;
+        this.name = name;
+    }
+
 
     public static boolean frontAttack(String view)
     {
