@@ -4,11 +4,11 @@ class GetReportResults
 {
     public int[] solution(String[] id_list, String[] report, int k)
     {
-        int[] answer = {};
+        int[] countReport = {};
 
 
 
-        return answer;
+        return countReport;
     }
 }
 
