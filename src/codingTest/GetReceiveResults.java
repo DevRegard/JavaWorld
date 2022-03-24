@@ -7,6 +7,7 @@ class GetReportResults
         int[] answer = {};
 
 
+
         return answer;
     }
 }
@@ -24,8 +25,9 @@ class GetReportResults
       - 신고한 모든 유저 <- 정지 사실 메일 발송
       - 마지막에 취합 후 -> 정지 -> 정지 메일 발송
 
-    정리
-      :
+    결과값
+      - 각 유저별로 처리 결과 메일을 받은 횟수 반환
+
 [2]
     알고리즘
       1) 유저 신고 받기
