@@ -44,4 +44,11 @@ class GetReportResults
         - '정지 명단'
       Return) 각 유저별로 처리 결과 메일 받은 횟수
 
+[3]
+  i)
+
+  ii)
+
+  iii)
+
 */
