@@ -6,6 +6,16 @@ class GetReportResults
     {
         int[] countReport = {};
 
+        for (int i = 0; id_list.length < i; i++)
+        {
+//            if (id_list[i] >= k) 어떻게 해당 유저가 k번째 신고 당했다는 것을 알까?
+            {
+//                countReport += id_list[i]; 어떻게 그 유저를 배열에 담을까?
+            }
+        }
+
+//        만약 k번 이상 신고된 유저라면?
+//            - 해당 유저 정지 + 신고한 유저에게 알림
 
 
         return countReport;
@@ -22,6 +32,7 @@ class GetReportResults
     결과값:
       int[] 각 유저별로 처리 결과 메일을 받은 횟수
 
+    문제:
 
 [2]
     유저
@@ -36,12 +47,20 @@ class GetReportResults
       - 마지막에 취합 후 -> 정지 -> 정지 메일 발송
 
 
+    어떻게 해당 유저가 k번째 신고 당했다는 것을 알까?
+      - 어떻게 그 유저를 배열에 담을까?
 [3]
   i)
+    ...
+    만약 k번 이상 신고된 유저라면?
+      - 해당 유저 정지 + 신고한 유저에게 알림
+    ...
 
   ii)
 
   iii)
+
+  "역설: 오히려 솔루션 1개만 만드는 것은 어렵다."
 
 --
   1) 유저 신고 받기
@@ -57,5 +76,4 @@ class GetReportResults
       4) 신고 결과 발송
         - '정지 명단'
       Return) 각 유저별로 처리 결과 메일 받은 횟수
-
 */
