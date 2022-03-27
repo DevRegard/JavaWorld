@@ -10,9 +10,9 @@ public class Zombie extends Entity
 
     public Zombie(int id, int health, String name)
     {
-        this.id = id;
-        this.health = health;
-        this.name = name;
+//        this.id = id;
+//        this.health = health;
+//        this.name = name;
     }
 
 
