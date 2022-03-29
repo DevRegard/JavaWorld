@@ -22,10 +22,10 @@ public class SeqSearchSen
     static int[] a = {1,2,3,4,5,6,7,8,9,0,0};
     static int[] b = {2,1,3,6,8,3,7,2,8,9,2,6,3,8,2,0};
     static int[] c = {7,1,0,7,4,5,6,7,7,3,2,1,4,6,3,7,4,8,3,2,0};
-    static int aLen = a.length;
-    static int bLen = b.length;
-    static int cLen = c.length;
-    static int key = 100;
+    static int aLen = a.length - 1;
+    static int bLen = b.length - 1;
+    static int cLen = c.length - 1;
+    static int key = 0;
 
     static int seqSearchSen_i(int[] a, int len, int key)
     {
@@ -44,12 +44,18 @@ public class SeqSearchSen
 
         if (i == len){
 //            if (a[i] == a[i-1]){
-                System.out.println("그러나 a["+ i + "]값은 검색값(" + key +")은 가짜 데이터(보초값)입니다.");
-                System.out.println("a[" + i +"] = " + a[i]);
-                System.out.println("a[" + (i-1) +"] = " + a[i-1]);
-                System.out.println("-1");
+                System.out.println("ㄴ> 그러나 a["+ i + "]값은 검색값(" + key +")은 가짜 데이터(보초값)입니다.");
+                System.out.println("  a[" + i +"] = " + a[i]);
+                System.out.println("  a[" + (i-1) +"] = " + a[i-1]);
+                System.out.println("  -1");
 //            }
         }
+        else
+        {
+            System.out.println("  a[" + i +"] = " + a[i]);
+            System.out.println("  a[" + (i-1) +"] = " + a[i-1]);
+        }
+
 
         return i == len ? -1 : i;
     }
@@ -57,8 +63,8 @@ public class SeqSearchSen
     public static void main (String[] args)
     {
         seqSearchSen_i(a, aLen, key);
-//        seqSearchSen_i(b, bLen, key);
-//        seqSearchSen_i(c, cLen, key);
+        seqSearchSen_i(b, bLen, key);
+        seqSearchSen_i(c, cLen, key);
 
 //        System.out.println("b: " + b);
 //        System.out.println("b 길이: " + bLen);
@@ -88,5 +94,8 @@ public class SeqSearchSen
       i. 배열 추가 공간 확보(메서드 등) -> 단, 기본 배열은 추가 불가
         - 기본 배열 사용 시: 최초 생성 배열의 마지막 인덱스는 '0'으로 여분 공간 생성
         - 내장 배열 사용 시: API 통한 배열 추가 매서드 활용
+      ii.
+        - 정적 배열 길이 변수: length - 1
+        - 2중 조건문(X) -> if ~ else 조건문 추가
   - [4]
  */
