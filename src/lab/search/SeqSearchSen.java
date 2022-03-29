@@ -14,7 +14,7 @@ package lab.search;
 
 [3]
   i. while 선형 검색 보초법
-  i. for 선형 검색 보초법
+  ii. for 선형 검색 보초법
 
  */
 public class SeqSearchSen
@@ -25,12 +25,12 @@ public class SeqSearchSen
     static int aLen = a.length;
     static int bLen = b.length;
     static int cLen = c.length;
-    static int key = 0;
+    static int key = 100;
 
     static int seqSearchSen_i(int[] a, int len, int key)
     {
         int i = 0;
-        a[len - 1] = key;
+        a[len] = key;
 
         while (true)
         {
@@ -42,10 +42,18 @@ public class SeqSearchSen
             i++;
         }
 
-        if (i == len - 1)
-            System.out.println("그러나 a["+ i + "]값은 검색값(" + key +")이 아닙니다.");
+        // ISSUE: '마지막 인덱스 == 보초값(검색값)' 경우에도 출력하는 문제
+        // 문제데이터: a배열
+        if (i == len){
+//            if (a[i] == a[i-1]){
+                System.out.println("그러나 a["+ i + "]값은 검색값(" + key +")은 가짜 데이터(보초값)입니다.");
+                System.out.println("a[" + i +"] = " + a[i]);
+                System.out.println("a[" + (i-1) +"] = " + a[i-1]);
+                System.out.println("-1");
+//            }
+        }
 
-        return i == len-1 ? -1 : i;
+        return i == len ? -1 : i;
     }
 
     public static void main (String[] args)
@@ -74,5 +82,4 @@ public class SeqSearchSen
     - [2] 원인: 보초 추가 생략함 (a[len] = key), len 변수를 length 설정하여 인덱스 상이
     - [3] 해결: 보초 코드 추가, 'len - 1' 로 수정
     - [4] 코드 정상 작동함. 메세지 출력에 경우 삼항연산자를 생략[포기] 해야한다. -> [3] 별도 조건문 생성 (최대 1회 실행)
-
  */
