@@ -30,6 +30,7 @@ public class SeqSearchSen
     static int cLen = c.length - 1;
     static int key = 0;
 
+    // while 선형 검색 보초법
     static int seqSearchSen_i(int[] a, int len, int key)
     {
         int i = 0;

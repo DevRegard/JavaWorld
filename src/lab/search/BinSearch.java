@@ -12,6 +12,7 @@ package lab.search;
     - 맨 앞: 0
     - 맨 마지막: n-1
     - 중간값: (n-1)/2
+
   2) 전략
     i. 맨 앞 -> 중간값 + 1
    ii. 맨 마지막 -> 중간값 - 1
@@ -24,6 +25,9 @@ package lab.search;
    - 평균: log n
    - 검색 실패: [log n - 1] 회
    - 검색 성공: log n -1 회
+
+[3]
+
  */
 
 public class BinSearch
@@ -32,7 +36,7 @@ public class BinSearch
     static int lenA = a.length;
     static int key = 0;
 
-    static int binSearch(int[] a, int len, int key)
+    static int binSearch_i(int[] a, int len, int key)
     {
         int first = 0;
         int last = len - 1;
