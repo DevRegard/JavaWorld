@@ -10,6 +10,9 @@ package lab.search;
   방법
 
 
+  종료 조건
+  1)
+
  */
 
 public class BinSearch
