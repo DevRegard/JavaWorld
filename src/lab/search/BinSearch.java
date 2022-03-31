@@ -27,19 +27,21 @@ package lab.search;
    - 검색 성공: log n -1 회
 
 [3]
-
+  i.
  */
 
 public class BinSearch
 {
     static int[] a = {1,2,3,4,5,6,7,8,9,0};
-    static int lenA = a.length;
     static int key = 0;
 
-    static int binSearch_i(int[] a, int len, int key)
+    // i.
+    static int binSearch_i(int[] arr, int key)
     {
+        int len = arr.length;
         int first = 0;
         int last = len - 1;
+
 
         do {
             int center = (len - 1) / 2;
@@ -52,3 +54,11 @@ public class BinSearch
         return -1;
     }
 }
+
+/*
+[4]
+  배열 길이 변수 개선
+  - static int len -> (local) int len
+    - 효과: 매개변수 축소 + 안정성
+
+ */
