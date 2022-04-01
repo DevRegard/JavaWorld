@@ -42,7 +42,6 @@ public class BinSearch
         int first = 0;
         int last = len - 1;
 
-
         do {
             int center = (len - 1) / 2;
 
