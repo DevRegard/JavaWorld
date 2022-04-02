@@ -27,7 +27,7 @@ package lab.search;
    - 검색 성공: log n -1 회
 
 [3]
-  i.
+  i. 이진 검색
  */
 
 public class BinSearch
