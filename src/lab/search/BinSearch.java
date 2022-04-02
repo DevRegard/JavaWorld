@@ -35,7 +35,7 @@ public class BinSearch
     static int[] a = {1,2,3,4,5,6,7,8,9,0};
     static int key = 0;
 
-    // i.
+    // i. 이진 검색
     static int binSearch_i(int[] arr, int key)
     {
         int len = arr.length;
