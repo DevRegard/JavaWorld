@@ -60,8 +60,11 @@ public class BinSearch
 
     public static void main(String[] args)
     {
-        Arrays.sort(b);
-        Arrays.sort(c);
+//        Arrays.sort(b);
+//        Arrays.sort(c);
+//
+//        binSearch_i(b, 50);
+//        binSearch_i(c, 7);
 
     }
 }
