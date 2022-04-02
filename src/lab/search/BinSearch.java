@@ -30,9 +30,14 @@ package lab.search;
   i. 이진 검색
  */
 
+import java.sql.Array;
+import java.util.Arrays;
+
 public class BinSearch
 {
     static int[] a = {1,2,3,4,5,6,7,8,9,0};
+    static int[] b = {2,1,3,6,8,3,7,2,8,9,2,6,3,8,2};
+    static int[] c = {7,1,0,7,4,5,6,7,7,3,2,1,4,6,3,7,4,8,3,2};
     static int key = 0;
 
     // i. 이진 검색
@@ -51,6 +56,13 @@ public class BinSearch
         } while (first <= last);
 
         return -1;
+    }
+
+    public static void main(String[] args)
+    {
+        Arrays.sort(b);
+        Arrays.sort(c);
+
     }
 }
 
