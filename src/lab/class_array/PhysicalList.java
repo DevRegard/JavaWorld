@@ -1,6 +1,24 @@
 package lab.class_array;
+
+// [1] ISSUE: 클래스 배열 -> 신체 기록 리스트 구현
+
+public class PhysicalList
+{
+    // MD-i: 필드
+    String name;
+    int height;
+    double vision;
+
+    // MD-ii: 생성자
+    PhysicalList(String name, int height, double vision)
+    {
+        this.name = name;
+        this.height = height;
+        this.vision = vision;
+    }
+}
+
 /*
-[1] ISSUE: 클래스 배열 -> 신체 기록 리스트 구현
 [2]
 MK| 클래스 배열 (Class Array)
     : 다양한 데이터형 조합할 수 있는 자료구조
@@ -32,20 +50,5 @@ MK| 신체 기록 리스트
 [3]
   MD-i  : 필드
   MD-ii : 생성자
+
  */
-
-public class PhysicalList
-{
-    // MD-i: 필드
-    String name;
-    int height;
-    double vision;
-
-    // MD-ii: 생성자
-    PhysicalList(String name, int height, double vision)
-    {
-        this.name = name;
-        this.height = height;
-        this.vision = vision;
-    }
-}
