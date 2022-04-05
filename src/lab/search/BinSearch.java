@@ -27,7 +27,7 @@ package lab.search;
   이진 검색 복잡도
    - 평균: log n
    - 검색 실패: [log n - 1] 회
-   - 검색 성공: log n -1 회
+   - 검색 성공: log n -1 회ㄹ
 
 [3]
   i. 이진 검색
