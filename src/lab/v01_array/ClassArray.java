@@ -1,4 +1,4 @@
-package lab.class_array;
+package lab.v01_array;
 
 /*
 [1] ISSUE: 클래스 배열 -> 신체 기록 리스트 구현
@@ -27,7 +27,7 @@ package lab.class_array;
  ii. 생성자
  */
 
-public class PhysicalList
+public class ClassArray
 {
     // 필드
     String name;
@@ -35,7 +35,7 @@ public class PhysicalList
     double vision;
 
     // 생성자
-    PhysicalList(String name, int height, double vision)
+    ClassArray(String name, int height, double vision)
     {
         this.name = name;
         this.height = height;

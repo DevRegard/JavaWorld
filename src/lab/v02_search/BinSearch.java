@@ -1,4 +1,4 @@
-package lab.search;
+package lab.v02_search;
 
 /*
 [1] ISSUE: 이진 검색
@@ -32,9 +32,6 @@ package lab.search;
 [3]
   i. 이진 검색
  */
-
-import java.sql.Array;
-import java.util.Arrays;
 
 public class BinSearch
 {

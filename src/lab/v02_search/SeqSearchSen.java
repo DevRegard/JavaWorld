@@ -1,4 +1,4 @@
-package lab.search;
+package lab.v02_search;
 /*
 [1]
   보초법(sentinel method) : 배열의 맨 끝 요소에 '검색하려는 키 값' 저장하는 방법

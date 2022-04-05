@@ -1,4 +1,4 @@
-package lab.search;
+package lab.v02_search;
 /*
 [1]
   선형 검색
