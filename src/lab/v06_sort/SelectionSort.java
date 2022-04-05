@@ -1,4 +1,4 @@
-package lab.v07_sort;
+package lab.v06_sort;
 
 /*
 [1]
