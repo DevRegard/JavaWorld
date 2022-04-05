@@ -12,8 +12,8 @@ package lab.v01_array;
   - 시력: Double
 
 [3]
-  i. 필드
- ii. 생성자
+ 1. 필드
+ 2. 생성자
  */
 
 public class ClassArray
