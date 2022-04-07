@@ -1,4 +1,4 @@
-package codingTest;
+package coding;
 
 class GetReportResults
 {
