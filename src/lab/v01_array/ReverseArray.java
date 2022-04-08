@@ -16,13 +16,15 @@ public class ReverseArray
     {
         for (int i = 0; i < a.length / 2; i++)
         {
+            // Q1
             for (int j = 0; j < a.length; j++)
                 System.out.print(a[j] + " ");
             System.out.println(" ");
             System.out.println("a[" + i +"]과(와) a[" + (a.length - i - 1) + "]를 교환합니다.");
+
+            // 배열 역순 만들기
             swap(a, i, a.length - i - 1);
         }
-
     }
 
     // Q2
@@ -38,6 +40,7 @@ public class ReverseArray
 
     public static void main(String[] args) {
         int[] aaa = {1, 2, 3, 4, 5, 6, 7};
+
         reverse(aaa);
 
         for (int i = 0; i < aaa.length; i++)
