@@ -69,4 +69,6 @@ public class Triangle
   [Q17]
   3. pyramid()에서 Q17 구현
 
+  > 다중 루프 통한 삼각형, 피라미드 구현
+
  */
