@@ -67,3 +67,8 @@ public class LottoPro
 
     }
 }
+
+/*
+TODO
+1. 중복 하지 않는 번호 6
+*/
