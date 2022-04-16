@@ -67,3 +67,10 @@ public class LottoPro
 
     }
 }
+
+/*
+TODO
+1. 중복 하지 않는 번호 6개
+  -> 로또 6/45, 연금복권720
+2. Swing API
+*/
